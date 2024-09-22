@@ -1,0 +1,118 @@
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.form-container,.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40%;
+    padding: 25px;
+}
+h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+.content{
+    font-size: 25px;
+}
+.form{
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.form-group{
+    height: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-group .form-control{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: none;
+    z-index: 10;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    outline: none;
+    transition: all 0.2s linear;
+}
+.form-group .form-label{
+    position: absolute;
+    top:10px;
+    left: 15px;
+    padding: 0px 5px;
+    color: #a1a1a1;
+    font-size: 14px;
+    background: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+.form-control:focus + .form-label{
+    top:-12px;
+    background-color: white;
+    z-index: 100;
+    color: dodgerblue;
+}
+.form-control:focus{
+    border: 1px solid dodgerblue;
+}
+.form-control:not(:focus):valid + .form-label{
+    top:-12px;
+    background-color: white;
+    z-index: 100;
+}
+#show{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    accent-color:dodgerblue;
+}
+.show-pass{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+}
+.box-bottom{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    text-align: center;
+}
+#sign-up{
+    border: none;
+    background-color: rgb(33, 207, 33);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+#sign-up:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#login{
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    align-self: center;
+    font-size: 20px;
+    font-weight: bold;
+}
